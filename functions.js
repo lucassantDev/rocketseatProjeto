@@ -78,6 +78,7 @@ const showInvite = (userData) =>{
 	`
 
 	updateImageLinks();
+	app.setAttribute('class', 'page-invite');
 }
 
 const saveUser = (userData) =>{
@@ -171,11 +172,17 @@ const startApp = () => {
 	`;
 
 	app.innerHTML = content;
+	app.setAttribute('class', 'page-start');
 	updateImageLinks();
 	formAction();
 };
 	
 
-// startApp()
+startApp();
+// showInvite({
+// 	email: "test@test.com",
+// 	phone: '999',
+// 	ref: 100
+// });
 
-document.getElementById("logo").onclick = () => startApp()
+document.querySelector("header").onclick = () => startApp()
